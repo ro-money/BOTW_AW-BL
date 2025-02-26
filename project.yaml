@@ -1,11 +1,12 @@
 #my first project in celer!
 title: All Women (Bug Limit)
-version: 1.2.0
+version: 1.3.0
 route:
   use: ./main.yaml
 config:
 - use: Pistonight/celer-presets/botw/mini.yaml
 - plugins:
+  - use: link
   - use: variables
 - tags:
     important:
@@ -19,14 +20,12 @@ config:
     wb:
       color: deeppink
       background: black
-    sh:
-      color: aquamarine
-    loc:
-      color: yellow
     money:
       background: black
       color: lawngreen
       bold: true
+    mon:
+      color: lawngreen
     val:
       background: black
       color: lawngreen
@@ -47,15 +46,16 @@ config:
     rito-b: https://icons.pistonite.org/icon/character.teba.none.000000.000000.2a767d.59ffff.2a767d.59ffff.png
     geru-w: https://icons.pistonite.org/icon/character.urbosa.none.000000.000000.8c5e28.ffffb5.8c5e28.ffffb5.png
     male: https://icons.pistonite.org/icon/character.link.none.000000.000000.8c5e28.ffffb5.8c5e28.ffffb5.png
-    reload: https://icons.pistonite.org/icon/misc.double_square.none.69a2d5.c1fefe.69a2d5.c1fefe.69a2d5.c1fefe.png
     impa: https://icons.pistonite.org/icon/character.impa.none.2a767d.59ffff.8c5e28.ffffb5.8c5e28.ffffb5.png
     riju: https://icons.pistonite.org/icon/character.riju.none.2a767d.59ffff.8c5e28.ffffb5.8c5e28.ffffb5.png
     king: https://icons.pistonite.org/icon/character.king.none.2a767d.59ffff.8c5e28.ffffb5.8c5e28.ffffb5.png
     gfairy: https://icons.pistonite.org/icon/character.great_fairy.none.2a767d.59ffff.8c5e28.ffffb5.8c5e28.ffffb5.png
-    horse: https://icons.pistonite.org/icon/misc.horse.none.568c28.c8e6af.8c5e28.ffffb5.8c5e28.ffffb5.png
-    seal: https://icons.pistonite.org/icon/misc.shield.none.d57b69.fec1d3.d57b69.fec1d3.d57b69.fec1d3.png
+    horse: https://icons.pistonite.org/icon/misc.horse.none.613b75.b96cf5.8c5e28.ffffb5.8c5e28.ffffb5.png
+    seal: https://icons.pistonite.org/icon/misc.shield.none.cfa240.ffd700.333333.eeeeee.333333.eeeeee.png
     chest: https://icons.pistonite.org/icon/shrine.blessing.none.000000.000000.8c5e28.fdfdfd.8c5e28.fdfdfd.png
-    pot: https://icons.pistonite.org/icon/misc.pot.none.d57b69.fec1d3.568c28.fdfdfd.568c28.fdfdfd.png
+    item: https://icons.pistonite.org/icon/misc.apple.none.8c5e28.ffffb5.633830.f0673a.633830.f0673a.png
+    weapon: https://icons.pistonite.org/icon/shrine.sword.none.cfa240.000000.333333.eeeeee.8c5e28.ffffb5.png
+    pot: https://icons.pistonite.org/icon/misc.pot.none.633830.f0673a.333333.eeeeee.8c5e28.ffffb5.png
     misc: https://icons.pistonite.org/icon/misc.double_square.none.69a2d5.c1fefe.69a2d5.c1fefe.69a2d5.c1fefe.png
     lum: https://icons.pistonite.org/icon/misc.square.none.000000.000000.2a767d.59ffff.2a767d.59ffff.png
     rar: https://icons.pistonite.org/icon/misc.square.none.000000.000000.cfa240.ffd700.cfa240.ffd700.png
