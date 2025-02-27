@@ -279,6 +279,11 @@
   - .item(Torch & 2 Wood):
       comment: next to cookpot
       coord: [1752,1952]
+  - Buy frogs from .npc(Beedle):
+      icon-doc: male
+      comment: .money(rupees = ).var(r)
+      vars:
+        r: .sub(30)
   - Reload for .w(Brokka/Celessa/Toma):
       icon: misc
       counter: .var(women)
@@ -437,7 +442,7 @@
   - .w(Canni):
       icon: hyli-w
       counter: .var(women)
-      comment: horse
+      comment: horse girl
       coord: [-1454,1249]
   - .w(Myti):
       icon: hyli-w
@@ -474,8 +479,7 @@
   - .w(Chabi):
       icon: hyli-w
       counter: .var(women)
-      comment: kill the boko
-      notes: she gives you monster extract which you need later
+      comment: under attack
       coord: [-1872,-272]
   - .dir(W) to .loc(Tabantha Bridge Stable):
       comment: look for .w(Yammo)
@@ -497,7 +501,7 @@
   - .w(Banji):
       icon: hyli-w
       counter: .var(women)
-      comment: near horses
+      comment: horse girl
       movements:
         - [-2914,-547]
   - .w(Ena):
@@ -544,6 +548,9 @@
       icon: lum
       notes: the fifth one is on the backside of the left rock
       coord: [-3525,-789]
+  - .item(Swift Violet):
+      icon: item
+      coord: [-3496,-807]
   - .dir(NE) to .boss(Stone Talus)
   - Rare Ore Deposit:
       icon: rar
@@ -589,14 +596,16 @@
         - [-3473,-1850]
         - [-3500,-1822]
         - [-3560,-1816]
-  - .w(Misa) (buy items):
+  - .w(Misa):
       icon: rito-r
       counter: .var(women)
       comment: general store
-      notes: buy one each of Goat Butter, Cane Sugar, Tabantha Wheat
       coord: [-3647,-1822]
+  - Buy Snowquill Trousers:
+      comment: .money(rupees = ).var(r)
+      coord: [-3633,-1785]
       vars:
-        r: .sub(36)
+        r: .sub(550)
   - .w(Cree, Kotts, Notts, Kheel, & Genli):
       icon: child
       counter: .var(women)
@@ -605,13 +614,15 @@
       coord: [-3605,-1790]
       vars:
         women: .add(4)
+  - .w(Laissa):
+      icon: rito-r
+      counter: .var(women)
+      comment: jump through window to shrine
+      coord: [-3636,-1792]
   - Open & Enter .loc(Akh Va'quot):
       icon: incsh
       comment: goodies inside!
-      movements:
-        - [-3639,-1800]
-        - [-3655,-1779]
-        - [-3656,-1758]
+      coord: [-3656,-1758]
   - .item(Ancient Core & Sapphire):
       icon-doc: chest
       comment: inside shrine
@@ -621,7 +632,6 @@
 - Necluda Seaside:
   - Warp to .loc(Ka'o Makagh):
       icon-doc: incsh
-      comment: .money(rupees = ).var(r)
       movements:
         - to: [522,3525]
           warp: true
@@ -718,13 +728,13 @@
       counter: .var(women)
       comment: talk to her
       coord: [2958,3495]
-  - Sell to 4450:
+  - Sell to 4500:
       comment: .money(rupees = ).var(r)
       vars:
-        r: 4450
+        r: 4500
   - Fire Arrows:
       icon: chest
-      comment: mag chest in water
+      comment: chest in water
       coord: [2967,3502]
   - .w(Chessica):
       icon: hyli-w
@@ -752,6 +762,7 @@
       icon: item
       comment: under house
       coord: [2884,3404]
+  - Eat speed food
   - .dir(N) to .loc(Hateno Village):
       movements:
         - [2910,3325]
@@ -1239,8 +1250,8 @@
   - .dir(N) to .loc(East Akkala Stable):
       movements:
         - [4050,-1866]
-        - [4218,-2502]
-        - [4260,-2698]
+        - [4214,-2486]
+        - [4266,-2580]
   - Take horse:
       icon: horse
       coord: [4233,-2744]
@@ -1249,9 +1260,9 @@
       counter: .var(women)
       comment: at cookpot
       coord: [4248,-2749]
-  - Cook food:
-      icon: pot
-      notes: Hearty
+  - Make 4 speed elixirs:
+      icon-doc: pot
+      comment: 4 of (3x Frog 1x Lizard 1x Fang)
   - .w(Aya):
       icon: hyli-w
       counter: .var(women)
@@ -1302,6 +1313,7 @@
         - [-3100,2450]
         - [-3183,2486]
       comment: watch for .w(Calisa & Lukan)
+  - Drink speed elixir
   - .w(Ripp):
       icon: geru-w
       counter: .var(women)
@@ -1347,21 +1359,6 @@
       counter: .var(women)
       comment: send her to .loc(Tarrey Town)
       coord: [-3269,2585]
-  - Set time to night:
-      icon: pot
-      coord: [-3278,2570]
-  - .w(Emri):
-      icon: geru-w
-      counter: .var(women)
-      comment: examine banana
-      coord: [-3276,2566]
-  - .mon(Silver Rupee):
-      icon: chest
-      comment: .money(rupees = ).var(r)
-      notes: metal chest in water
-      coord: [-3243,2563]
-      vars:
-        r: .add(100)
   - .w(Shaillu):
       icon: geru-w
       counter: .var(women)
@@ -1389,30 +1386,88 @@
         - [-3259,2611]
       vars:
         r: .sub(600)
-  - .mon(Purple Rupee):
+  - Set time to night:
+      icon: pot
+      coord: [-3278,2570]
+  - .w(Emri):
+      icon: geru-w
+      counter: .var(women)
+      comment: examine banana
+      coord: [-3276,2566]
+  - .mon(Silver Rupee):
       icon: chest
       comment: .money(rupees = ).var(r)
-      coord: [-3265,2628]
+      notes: metal chest in water
+      coord: [-3243,2563]
       vars:
-        r: .add(50)
+        r: .add(100)
 - Gerudo Town:
   - Warp to .loc(Daqo Chisay):
       icon-doc: incsh
-      comment: .important(WAIT UNTIL 10:05PM TO WARP)
       movements:
         - to: [-3817,2820]
           warp: true
       color: mediumpurple
-  - .w(Traysi):
-      icon: hyli-w
+  - .w(Saula):
+      icon: geru-w
       counter: .var(women)
-      comment: should be on top of bar
-      coord: [-3850,2860]
+      comment: examine gerudo veil
+      coord: [-3804,2905]
+  - .w(Fegran):
+      icon: geru-w
+      counter: .var(women)
+      comment: gerudo sauntering around entrance
+      coord: [-3810,2885]
+  - .w(Dalia):
+      icon: child
+      counter: .var(women)
+      comment: child at fruit shop
+      movements:
+        - [-3832,2880]
+        - [-3826,2878]
+  - .w(Lorn):
+      icon: geru-w
+      counter: .var(women)
+      comment: examine voltfruit
+      coord: [-3824,2881]
+  - .w(Isha):
+      icon: geru-w
+      counter: .var(women)
+      comment: assistant jeweler
+      coord: [-3828,2885]
+  - .w(Cara):
+      icon: geru-w
+      counter: .var(women)
+      comment: jeweler
+      movements:
+        - [-3832,2880]
+        - [-3838,2868]
+  - .w(Pritana):
+      icon: geru-w
+      counter: .var(women)
+      comment: next to bar door
+      coord: [-3851,2859]
+  - .w(Nellie):
+      icon: geru-w
+      counter: .var(women)
+      comment: elderly gerudo
+      notes: in the bar between 5-11
+      coord: [-3855,2860]
+  - .w(Furosa):
+      icon: geru-w
+      counter: .var(women)
+      comment: bartender
+      coord: [-3857,2856]
   - .w(Jules):
       icon: hyli-w
       counter: .var(women)
       comment: hylian in bar
       coord: [-3865,2862]
+  - .w(Deltan):
+      icon: geru-w
+      comment: sad gerudo in bar
+      counter: .var(women)
+      coord: [-3858,2865]
   - .w(Pyra, Sumati, & Yaido):
       icon: geru-w
       counter: .var(women)
@@ -1420,27 +1475,6 @@
       coord: [-3861,2870]
       vars:
         women: .add(2)
-  - .w(Deltan):
-      icon: geru-w
-      comment: sad gerudo in bar
-      counter: .var(women)
-      coord: [-3858,2865]
-  - .w(Furosa):
-      icon: geru-w
-      counter: .var(women)
-      comment: bartender
-      coord: [-3857,2856]
-  - .w(Nellie):
-      icon: geru-w
-      counter: .var(women)
-      comment: elderly gerudo
-      notes: in the bar between 5-11
-      coord: [-3855,2860]
-  - .w(Pritana):
-      icon: geru-w
-      counter: .var(women)
-      comment: next to bar door
-      coord: [-3851,2859]
   - .w(Rima):
       icon: geru-w
       counter: .var(women)
@@ -1482,45 +1516,6 @@
       counter: .var(women)
       comment: outside inn
       coord: [-3840,2895]
-  - .w(Isha):
-      icon: geru-w
-      counter: .var(women)
-      comment: assistant jeweler
-      coord: [-3828,2885]
-  - .w(Cara):
-      icon: geru-w
-      counter: .var(women)
-      comment: jeweler
-      movements:
-        - [-3832,2880]
-        - [-3838,2868]
-  - .w(Dalia):
-      icon: child
-      counter: .var(women)
-      comment: child at fruit shop
-      movements:
-        - [-3832,2880]
-        - [-3826,2878]
-  - .w(Lorn):
-      icon: geru-w
-      counter: .var(women)
-      comment: examine voltfruit
-      coord: [-3824,2881]
-  - .w(Fegran):
-      icon: geru-w
-      counter: .var(women)
-      comment: gerudo sauntering around entrance
-      coord: [-3810,2885]
-  - .w(Saula):
-      icon: geru-w
-      counter: .var(women)
-      comment: examine gerudo veil
-      coord: [-3804,2905]
-  - .w(Nali):
-      icon: geru-w
-      counter: .var(women)
-      comment: only in plaza until midnight
-      coord: [-3844,2914]
   - .w(Frita):
       icon: rito-r
       counter: .var(women)
@@ -1543,6 +1538,11 @@
       coord: [-3860,2913]
       vars:
         women: .add(1)
+  - .w(Nali):
+      icon: geru-w
+      counter: .var(women)
+      comment: only in plaza until midnight
+      coord: [-3844,2914]
   - .w(Ardin):
       icon: geru-w
       counter: .var(women)
@@ -1569,6 +1569,11 @@
       movements:
         - [-3838,2943]
         - [-3862,2947]
+  - .w(Traysi):
+      icon: hyli-w
+      counter: .var(women)
+      comment: right next to .w(Ploka)
+      coord: [-3863,2946]
   - .w(Riju & Buliara):
       icon: riju
       counter: .var(women)
@@ -1641,12 +1646,17 @@
       counter: .var(women)
       comment: soldier practicing with spear
       coord: [-3911,2913]
+  - .w(Risa):
+      icon: geru-w
+      counter: .var(women)
+      comment: walking home from class
+      notes: she walks past at 11 15PM, if you're really late you can get her later 
+      coord: [-3893,2913]
   - .w(Laine):
       icon: geru-w
       counter: .var(women)
       comment: gate guard
       movements:
-        - [-3897,2913]
         - [-3891,2908]
         - [-3893,2895]
         - [-3916,2877]
@@ -1684,12 +1694,60 @@
       comment: jailed
       notes: burn banner 1 right of middle
       coord: [-3627,1388]
+  - Warp to .loc(Kay Noh):
+      icon-doc: incsh
+      movements:
+        - to: [-2811,2301]
+          warp: true
+      color: pink
+  - .item(Rushroom):
+      icon: item
+      comment: at least 2
+      coord: [-2814,2251]
+  - Talk to .npc(Sesami):
+      icon: male
+      coord: [-2797,2241]
+  - Make speed food:
+      icon-doc: pot
+      comment: 2x Swift Violet 3x Rushroom
+  - Reload for .w(Calisa & Lukan):
+      icon: misc
+      counter: .var(women)
+      notes:
+        - .wb(Lukan) - dark-skin gerudo with straight hair
+        - .wb(Calisa) - gerudo with hair in a bob
+      coord: [-2789,2254]
+      vars:
+        women: .add(1)
+  - .dir(E) to .loc(mountain):
+      movements:
+        - [-2590,2316]
+        - [-2638,2267]
+  - Rare Ore Deposit:
+      icon: rar
+      coord: [-2616,2230]
+  - .dir(NE) to .loc(Koukot Plateau):
+      movements:
+        - [-2572,2106]
+        - [-2418,2051]
+        - [-2166,1741]
+  - .w(Flaxel):
+      icon: hyli-w
+      counter: .var(women)
+      coord: [-2164,1708]
+  - Fire Arrows:
+      icon: chest
+      coord: [-2163,1702]
+  - .w(Canolo):
+      icon: hyli-w
+      counter: .var(women)
+      coord: [-2188,1691]
   - Warp to .loc(Daqo Chisay):
       icon-doc: incsh
       movements:
         - to: [-3817,2820]
           warp: true
-      color: pink
+      color: deeppink
   - .mon(Silver Rupee):
       icon: chest
       comment: .money(rupees = ).var(r)
@@ -1700,26 +1758,17 @@
       icon: geru-w
       counter: .var(women)
       comment: seal shop assistant
-      notes: if it's before 6:10 AM, get her just before .wb(Frelly)
+      notes: she'll be sleeping if it's before 6AM
       movements:
         - [-3783,2905]
         - [-3774,2913]
-  - .w(Risa):
-      icon: geru-w
-      counter: .var(women)
-      comment: in house across from GSC
-      movements:
-        - [-3805,2935]
-        - [-3810,2940]
-        - [-3803,2942]
   - .w(Greta):
       icon: geru-w
       counter: .var(women)
       comment: through door, don't have to open
-      movements:
-        - [-3810,2940]
-        - [-3805,2935]
-        - [-3780,2941]
+      coord: [-3780,2941]
+  - Talk to .w(Risa) (in house across from GSC) if you missed her earlier:
+      banner: true
   - .w(Muava):
       icon: geru-w
       counter: .var(women)
@@ -1782,91 +1831,30 @@
       coord: [-4870,3818]
       vars:
         r: .sub(1000)
-  - Warp to .loc(Kay Noh):
-      icon-doc: incsh
-      movements:
-        - to: [-2811,2301]
-          warp: true
-      color: deeppink
-  - Talk to .npc(Sesami):
-      icon: male
-      coord: [-2797,2241]
-  - Set to night:
-      icon: pot
-      coord: [-2811,2240]
-  - Reload for .w(Calisa & Lukan):
-      icon: misc
-      counter: .var(women)
-      notes:
-        - .wb(Lukan) - dark-skin gerudo with straight hair
-        - .wb(Calisa) - gerudo with hair in a bob
-      coord: [-2789,2254]
-      vars:
-        women: .add(1)
-  - .dir(E) to .loc(mountain):
-      movements:
-        - [-2590,2316]
-        - [-2638,2267]
-  - Rare Ore Deposit:
-      icon: rar
-      coord: [-2616,2230]
-  - .dir(NE) to .loc(Koukot Plateau):
-      movements:
-        - [-2572,2106]
-        - [-2418,2051]
-        - [-2166,1741]
-  - .w(Flaxel):
-      icon: hyli-w
-      counter: .var(women)
-      coord: [-2164,1708]
-  - Fire Arrows:
-      icon: chest
-      coord: [-2163,1702]
-  - .w(Canolo):
-      icon: hyli-w
-      counter: .var(women)
-      coord: [-2188,1691]
-- Tarrey Town & Hebra:
+- Hebra:
   - Warp to .loc(Dah Hesho):
       icon: incsh
       movements:
         - to: [3899,-1303]
           warp: true
       color: yellow
-  - .dir(N) to .loc(Tarrey Town) back window:
-      coord: [3974,-1561]
-  - Eavesdrop on .w(Ruli) & Hagie:
-      icon: hyli-w
-      counter: .var(women)
-      comment: talk through back window
+  - .dir(N) to .loc(Tarrey Town)
   - Talk to .npc(Hudson):
       icon: male
       movements:
-        - [3981,-1565]
         - [3982,-1599]
   - Talk to .npc(Hudson) again:
       icon-doc: male
       comment: give him 30 wood
-  - Give .w(Ruli) a Monster Cake:
-      icon-doc: hyli-w
-      movements:
-        - [3968,-1583]
-        - [3973,-1570]
-        - to: [3970,-1594]
-          warp: true
+  - .w(Ruli):
+      icon: hyli-w
+      counter: .var(women)
+      coord: [3975,-1572]
   - .w(Hunnie):
       icon: child
       counter: .var(women)
       comment: cake-eating child
-      movements:
-        - [3968,-1583]
-        - [3973,-1577]
-  - Talk to .w(Ruli):
-      icon-doc: hyli-w
-      comment: .money(rupees = ).var(r)
-      vars:
-        r: .add(300)
-      coord: [3975,-1572]
+      coord: [3973,-1577]
   - Warp to .loc(Akh Va'quot):
       icon-doc: incsh
       movements:
@@ -1876,15 +1864,8 @@
   - .w(Amali):
       icon: rito-b
       coord: [-3668,-1770]
+      comment: on shrine landing
       counter: .var(women)
-  - .w(Laissa):
-      icon: rito-r
-      counter: .var(women)
-      comment: house next to shrine
-      movements:
-        - [-3655,-1779]
-        - [-3639,-1800]
-        - [-3636,-1792]
   - .w(Bedoli):
       icon: rito-r
       counter: .var(women)
@@ -1918,6 +1899,8 @@
       movements:
         - [-3577,-2073]
         - [-3482,-2128]
+  - Use speed food continuously while in .loc(Hebra):
+      banner: true
   - Rare Ore Deposit:
       icon: rar
       coord: [-3414,-2194]
@@ -1997,7 +1980,11 @@
       icon: hyli-w
       coord: [-1543,-1793]
       counter: .var(women)
+  - Make food (for money):
+      icon-doc: pot
+      comment: use all 5 slots when cooking!
   - Sell to 10000 at .npc(Beedle):
+      icon-doc: male
       comment: .money(rupees = ).var(r)
       vars:
         r: 10000
