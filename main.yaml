@@ -6,13 +6,11 @@
       notes:  you can honestly do plat however you want
       coord: [-1057,1808]
       color: deeppink
-  - .item(Bladed Rhino Beetles):
-      icon: item
-      notes: grab some mushrooms and apples too, for healing cold
-      coord: [-1015,1882]
   - .item(Wooden Axe):
       icon: weapon
-      coord: [-921,1871]
+      movements:
+        - [-998,1859]
+        - [-921,1871]
   - .item(Boko Shield):
       icon: seal
       coord: [-596,1702]
@@ -24,10 +22,10 @@
       movements:
         - [-683,1640]
         - [-672,1514]
-  - DLC .item(Ruby) & .item(Opal) (in water):
+  - DLC .item(Ruby):
       icon: chest
-      coord: [-695,1524]
-      notes: the opal is the farther away chest
+      notes: if no DLC, get Opal from a chest in the water
+      coord: [-671,1522]
   - Warp to .loc(Shrine of Resurrection):
       icon: sor
       movements:
@@ -82,6 +80,7 @@
   - .w(Mina):
       icon: hyli-w
       counter: .var(women)
+      notes: under attack on the ground - she might take a second or two to load in
       coord: [-544,1462]
   - amiibo for Epona:
       icon: horse
@@ -276,7 +275,8 @@
       counter: .var(women)
       comment: will appear by pot
       notes: take the apples for shorter textbox
-  - .item(Torch & 2 Wood):
+  - .item(Wood) (2):
+      icon: item
       comment: next to cookpot
       coord: [1752,1952]
   - Buy frogs from .npc(Beedle):
@@ -291,8 +291,7 @@
         - .wb(Brokka) - Hylian with Hunter's Shield (green)
         - .wb(Celessa) - Hylian with Emblazoned Shield (red)
         - .wb(Toma) - Hylian on horseback (brown/white spots)
-      movements:
-        - [1730,1952]
+      coord: [1730,1952]
       vars:
         women: .add(2)
 - Faron Grasslands:
@@ -335,22 +334,9 @@
       movements:
         - [441,3081]
         - [425,3280]
-  - Open & Enter .loc(Ka'o Makagh):
+  - Open .loc(Ka'o Makagh):
       icon: incsh
-      comment: goodies inside
       coord: [522,3525]
-  - .mon(Gold Rupee) & .item(Opal):
-      icon-doc: chest
-      comment: inside the shrine
-      notes: 
-      - the gold rupee is hidden behind a mag block behind the back left platform
-      - the opal is in a metal chest nearby that you can knock down
-      vars:
-        r: .add(300)
-  - Warp to .loc(Ka'o Makagh):
-      icon-doc: incsh
-      comment: .money(rupees = ).var(r)
-      color: mediumpurple
   - Iron Sledgehammer:
       icon: weapon
       coord: [517,3480]
@@ -432,7 +418,7 @@
       movements:
         - to: [-1436,1991]
           warp: true
-      color: pink
+      color: mediumpurple
   - .dir(N) to .loc(Outskirt Stable)
   - .w(Aliza):
       icon: hyli-w
@@ -456,9 +442,7 @@
   - Talk to .npc(Beedle):
       icon: male
       comment: .money(rupees = ).var(r)
-      notes:
-        - Sell Bladed Rhino Beetle when prompted
-        - Buy 3 Hot-Footed Frog and 5 Restless Cricket
+      notes: Buy 3 Hot-Footed Frog and 5 Restless Cricket
       coord: [-1421,1280]
       vars:
         r: .sub(80)
@@ -570,9 +554,6 @@
       coord: [-3305,-1331]
       vars:
         r: .add(100)
-  - .item(Topaz):
-      icon: chest
-      coord: [-3298,-1362]
   - .dir(N) to .loc(Rito Stable):
       movements:
         - [-3294,-1556]
@@ -594,13 +575,17 @@
         - [-3423,-1879]
         - [-3443,-1880]
         - [-3473,-1850]
-        - [-3500,-1822]
-        - [-3560,-1816]
+  - Iron Sledgehammer & .item(Hearty Salmon):
+      icon: item
+      coord: [-3490,-1853]
   - .w(Misa):
       icon: rito-r
       counter: .var(women)
       comment: general store
-      coord: [-3647,-1822]
+      movements:
+        - [-3500,-1822]
+        - [-3560,-1816]
+        - [-3647,-1822]
   - Buy Snowquill Trousers:
       comment: .money(rupees = ).var(r)
       coord: [-3633,-1785]
@@ -635,7 +620,7 @@
       movements:
         - to: [522,3525]
           warp: true
-      color: deeppink
+      color: pink
   - Rare Ore Deposit:
       icon: rar
       movements:
@@ -656,6 +641,7 @@
       vars:
         women: .add(1)
   - .dir(E) to .loc(Lakeside Stable):
+      comment: look for .w(Totsuna, Meeshy, & Letty)
       movements:
         - [1235,3370]
         - [1292,3387]
@@ -677,6 +663,7 @@
       coord: [1572,3529]
   - Set time to night:
       icon-doc: pot
+  - Grab .item(Torch)
   - Reload for .w(Totsuna, Meeshy, & Letty):
       icon: misc
       counter: .var(women)
@@ -702,12 +689,6 @@
         - [2336,3346]
         - [2426,3435]
         - [2466,3488]
-  - .mon(Purple Rupee):
-      icon: chest
-      comment: .money(rupees = ).var(r)
-      coord: [2474,3605]
-      vars:
-        r: .add(50)
   - Luminous Stone Deposits (4):
       icon: lum
       coord: [2509,3577]
@@ -720,8 +701,7 @@
       icon: geru-w
       counter: .var(women)
       comment: looking for love
-      movements:
-        - [2591,3516]
+      coord: [2591,3516]
   - .dir(W) to .loc(Lurelin Village) docks
   - .w(Mubs):
       icon: hyli-w
@@ -741,8 +721,10 @@
       counter: .var(women)
       comment: behind the desk at the inn
       movements:
-        - [2968,3457]
-        - [2945,3423]
+        - [2959,3492]
+        - [2965,3470]
+        - [2949,3463]
+        - [2925,3431]
         - [2938,3426]
         - [2945,3436]
   - .w(Flavi):
@@ -756,6 +738,7 @@
       counter: .var(women)
       comment: house closest to the corner
       movements:
+        - [2938,3426]
         - [2916,3404]
         - [2897,3411]
   - .item(Endura Shrooms) (3):
@@ -911,7 +894,7 @@
       movements:
         - to: [1840,892]
           warp: true
-      color: salmon
+      color: deeppink
   - .w(Great Fairy Cotera):
       icon: gfairy
       counter: .var(women)
@@ -1080,23 +1063,22 @@
       comment: reward chest at end
   - Warp to .loc(Dah Hesho):
       icon-doc: incsh
-  - .dir(N) to .loc(Tarrey Town):
-      coord: [3982,-1599]
-      color: orange
+      color: salmon
+  - .dir(N) to .loc(Tarrey Town)
   - Talk to .npc(Hudson):
       icon: male
+      coord: [3982,-1599]
   - Talk to .npc(Hudson) again:
       icon-doc: male
       comment: give him 10 wood
   - .dir(WNW) to .loc(Torin Wetland):
       movements:
         - [3798,-1660]
+        - [3705,-1711]
       notes: be a bit to the right to avoid the guardians
   - Rare Ore Deposit:
       icon: rar
-      movements:
-        - [3705,-1711]
-        - [3391,-1666]
+      coord: [3391,-1666]
   - .dir(W) to .loc(South Akkala Stable):
       movements:
         - [3422,-1705]
@@ -1157,11 +1139,17 @@
   - .dir(W) up .loc(mountain):
       movements:
         - [2452,-1146]
-        - [2404,-1193]
-        - [2310,-1200]
+        - [2382,-1200]
+        - [2412,-1220]
+  - Rare Ore Deposit:
+      icon: rar
+      coord: [2402,-1230]
   - Luminous Stone Deposit (3):
       icon: lum
-      coord: [2310,-1230]
+      movements:
+        - [2412,-1220]
+        - [2322.5,-1191.5]
+        - [2310,-1230]
   - .dir(NW) to .loc(Goronbi Lake):
       movements:
         - [2127,-1325]
@@ -1203,7 +1191,7 @@
       movements:
         - to: [1820,-1518]
           warp: true
-      color: yellow
+      color: orange
   - .dir(SW) to .loc(Woodland Stable):
       movements:
         - [1760,-1439]
@@ -1231,7 +1219,7 @@
       movements:
         - to: [3899,-1303]
           warp: true
-      color: springgreen
+      color: yellow
   - .dir(N) to .loc(Tarrey Town):
       movements:
         - [3982,-1599]
@@ -1285,15 +1273,15 @@
       movements:
       - to: [-1436,1991]
         warp: true
-      color: skyblue
+      color: springgreen
   - .dir(W) to .loc(Mount Nabooru):
       movements:
         - [-1846,2031]
   - .dir(N + SW) to .loc(Gerudo Stable):
       movements:
-        - [-1865,2002]
-        - [-1966,1791]
-        - [-2086,1791]
+        - [-1943,1910]
+        - [-2062,1917]
+        - [-2221,1848]
         - [-2352,1904]
   - Ruby:
       icon: chest
@@ -1407,7 +1395,7 @@
       movements:
         - to: [-3817,2820]
           warp: true
-      color: mediumpurple
+      color: skyblue
   - .w(Saula):
       icon: geru-w
       counter: .var(women)
@@ -1423,7 +1411,7 @@
       counter: .var(women)
       comment: child at fruit shop
       movements:
-        - [-3832,2880]
+        - [-3827,2882]
         - [-3826,2878]
   - .w(Lorn):
       icon: geru-w
@@ -1446,7 +1434,11 @@
       icon: geru-w
       counter: .var(women)
       comment: next to bar door
-      coord: [-3851,2859]
+      movements:
+        - [-3832,2880]
+        - [-3837,2887]
+        - [-3848,2878]
+        - [-3851,2859]
   - .w(Nellie):
       icon: geru-w
       counter: .var(women)
@@ -1699,7 +1691,7 @@
       movements:
         - to: [-2811,2301]
           warp: true
-      color: pink
+      color: mediumpurple
   - .item(Rushroom):
       icon: item
       comment: at least 2
@@ -1747,7 +1739,7 @@
       movements:
         - to: [-3817,2820]
           warp: true
-      color: deeppink
+      color: pink
   - .mon(Silver Rupee):
       icon: chest
       comment: .money(rupees = ).var(r)
@@ -1837,7 +1829,7 @@
       movements:
         - to: [3899,-1303]
           warp: true
-      color: yellow
+      color: deeppink
   - .dir(N) to .loc(Tarrey Town)
   - Talk to .npc(Hudson):
       icon: male
@@ -1860,7 +1852,7 @@
       movements:
         - to: [-3656,-1758]
           warp: true
-      color: springgreen
+      color: salmon
   - .w(Amali):
       icon: rito-b
       coord: [-3668,-1770]
@@ -1936,12 +1928,10 @@
         - [-2929,-2646]
         - [-2994,-2787]
         - [-2981,-2983]
+        - [-2959,-3136]
   - .w(Selmie):
       icon: hyli-w
-      movements:
-        - [-2952,-3130]
-        - [-2959,-3136]
-        - [-2949,-3142]
+      coord: [-2949,-3142]
       counter: .var(women)
   - .dir(SE) to .loc(mountain hollow):
       movements:
@@ -1950,19 +1940,25 @@
   - Melt ice for Rare Ore Deposit:
       icon: rar
       comment: shoot fire arrow at the wood
-      movements:
-        - [-2832,-2901]
-  - .dir(E) to .loc(Snowfield Stable):
+      coord: [-2832,-2901]
+  - Rare Ore Deposit:
+      icon: rar
+      coord: [-2867,-2794]
+  - .dir(SE) to .loc(Kopeeki Drifts):
       movements:
         - [-2726,-2741]
-        - [-2068,-2569]
+  - Luminous Stone Deposits (3):
+      icon: lum
+      coord: [-2143,-2455]
+  - Rare Ore Deposit:
+      icon: rar
+      coord: [-2077,-2499]
+  - .dir(E) to .loc(Snowfield Stable)
   - .w(Juannelle):
       icon: hyli-w
       counter: .var(women)
       comment: always inside stable
-      movements:
-        - [-1642,-2573]
-        - [-1656,-2581]
+      coord: [-1656,-2581]
   - .w(Harlow):
       icon: hyli-w
       counter: .var(women)
@@ -1988,14 +1984,14 @@
       comment: .money(rupees = ).var(r)
       vars:
         r: 10000
-  - If you're low on rupees after selling everything (remember your Rubber Helm), there's a .mon(Gold Rupee) from the dog treasure at this stable (black dog) and another at the bottom of the middle waterfall near .loc(Dah Hesho). If still short, I'd start by warping to .loc(Akh Va'quot) and gliding .dir(east) to .loc(Dragon Bone Mire), where there's a .item(Diamond) and a .item(Sapphire):
+  - If you're low on rupees after selling everything (remember your Rubber Helm), there's a .mon(Gold Rupee) from the dog treasure at this stable (black dog) and another at the bottom of the middle waterfall near .loc(Dah Hesho). If still short, I'd start by warping to .loc(Akh Va'quot) and gliding .dir(east) to .loc(Dragon Bone Mire), where there's a Rare Ore Deposit, plus a .item(Diamond) and a .item(Sapphire) in chests.:
       banner: true
   - Warp to .loc(Dah Hesho):
       icon-doc: incsh
       movements:
         - to: [3899,-1303]
           warp: true
-      color: skyblue
+      color: springgreen
   - .w(Great Fairy Mija):
       icon: gfairy
       counter: .var(women)
@@ -2007,5 +2003,5 @@
   - .w(Monari):
       icon: hyli-w
       counter: .var(women)
-      comment: elderly woman
+      comment: house behind ore shop
       coord: [3981,-1605]
