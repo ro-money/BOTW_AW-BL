@@ -1,6 +1,6 @@
 #my first project in celer!
 title: All Women (Bug Limit)
-version: 1.3.2
+version: 1.4.0
 route:
   use: ./main.yaml
 config:
@@ -34,6 +34,7 @@ config:
     shr: https://icons.pistonite.org/icon/shrine.shrine.none.69a2d5.c1fefe.69a2d5.c1fefe.69a2d5.c1fefe.png
     incsh: https://icons.pistonite.org/icon/shrine.shrine.none.69a2d5.c1fefe.8c5e28.ffffb5.8c5e28.ffffb5.png
     tower: https://icons.pistonite.org/icon/location.tower.none.69a2d5.c1fefe.69a2d5.c1fefe.69a2d5.c1fefe.png
+    statue: https://icons.pistonite.org/icon/location.lightroot.none.333333.eeeeee.333333.eeeeee.69a2d5.c1fefe.png
     hyli-w: https://icons.pistonite.org/icon/character.zelda.none.000000.000000.8c5e28.ffffb5.8c5e28.ffffb5.png
     child: https://icons.pistonite.org/icon/character.terrako.none.000000.000000.8c5e28.ffffb5.8c5e28.ffffb5.png
     zora-b: https://icons.pistonite.org/icon/character.mipha.none.000000.000000.69a2d5.c1fefe.69a2d5.c1fefe.png

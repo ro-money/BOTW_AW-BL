@@ -1,5 +1,6 @@
 - Talk to 188 women without using glitches!
 - Includes 4 Great Fairies (who you must pay) and 13 travelling NPCs who you'll probably need to cycle reloads for. These travelling NPCs also have .link([info cards]https://github.com/cobchamp/all_women/tree/main/infocards/README.md) made by cobwoms.
+- This route scans amiibo for Epona 9 times, so 9 different chips are required
 - Great Plateau:
   - Exit .loc(Shrine of Resurrection):
       icon-doc: sor
@@ -82,9 +83,8 @@
       counter: .var(women)
       notes: under attack on the ground - she might take a second or two to load in
       coord: [-544,1462]
-  - amiibo for Epona:
+  - Scan amiibo for .npc(Epona):
       icon: horse
-      notes: SSB Link
       coord: [-508,1457]
   - .dir(NE) to .loc(Riverside Stable):
       movements:
@@ -100,20 +100,7 @@
       icon: hyli-w
       counter: .var(women)
       comment: inside stable
-      movements:
-        - [349,1092]
-  - Sell Ruby to .npc(Beedle):
-      icon-doc: male
-      comment: .money(rupees = ).var(r)
-      vars:
-        r: .add(210)
-  - Register Epona:
-      icon: horse
-      comment: .money(rupees = ).var(r)
-      notes: keep horse out
-      vars:
-        r: .sub(20)
-      coord: [333,1089]
+      coord: [349,1092]
   - Open .loc(Wahgo Katta):
       icon: incsh
       coord: [336,1016]
@@ -151,9 +138,9 @@
         - to: [336,1016]
           warp: true
       color: springgreen
-  - Take horse:
-      icon-doc: horse
-      coord: [333,1089]
+  - Scan amiibo for .npc(Epona):
+      icon: horse
+      coord: [378,996]
   - .dir(E) to .loc(Horwell Bridge):
       movements:
         - [404,1000]
@@ -224,6 +211,7 @@
         - [1822,917]
         - [1840,892]
   - Stamina Vessel:
+      icon: statue
       coord: [1841,998]
   - .w(Lasli):
       icon: hyli-w
@@ -252,14 +240,17 @@
         - [1900,988]
         - [1900,1036]
       comment: house near other entrance
-      notes: make sure to whistle sprint so your horse walks through town
       counter: .var(women)
-  - .dir(S) to .loc(Dueling Peaks Stable):
-      comment: look for .w(Brokka, Celessa, & Toma)
+  - Scan amiibo for .npc(Epona):
+      icon: horse
+      notes: wait until you're a bit past the first arch
       movements:
         - [1900,1026]
         - [1938,1022]
         - [1957,1043]
+  - .dir(S) to .loc(Dueling Peaks Stable):
+      comment: look for .w(Brokka, Celessa, & Toma)
+      movements:
         - [1956,1151]
         - [2090,1215]
         - [2118,1347]
@@ -314,9 +305,11 @@
       movements:
         - [-165,2627]
         - [-68,2674]
+  - Scan amiibo for .npc(Epona):
+      icon: horse
+      coord: [50,2761]
   - .dir(E) to .loc(Finra Woods):
       movements:
-        - [6,2763]
         - [113,2873]
         - [402,2885]
   - .w(Sorelia):
@@ -350,9 +343,9 @@
       coord: [521,3461]
       vars:
         women: .add(1)
-  - Take horse:
+  - Hop back on .npc(Epona):
       icon: horse
-      coord: [524,3446]
+      coord: [480,3451]
   - .dir(W) to .loc(Mounted Archery Camp):
       movements:
         - [447,3470]
@@ -365,7 +358,7 @@
         - [50,3318]
         - [36,3350]
         - [-122,3422]
-  - Gold Rupee:
+  - .mon(Gold Rupee):
       icon: chest
       comment: .money(rupees = ).var(r)
       notes: it's underwater on the right (north) side of the bridge
@@ -440,15 +433,14 @@
       counter: .var(women)
       comment: child near .w(Myti)
   - Talk to .npc(Beedle):
-      icon: male
+      icon-doc: male
       comment: .money(rupees = ).var(r)
       notes: Buy 3 Hot-Footed Frog and 5 Restless Cricket
-      coord: [-1421,1280]
       vars:
         r: .sub(80)
-  - Take horse:
+  - Scan amiibo for .npc(Epona):
       icon: horse
-      coord: [-1442,1267]
+      coord: [-1426,1258]
   - .dir(N) to .loc(Hyrule Ridge):
       movements:
         - [-1492,1015]
@@ -640,10 +632,12 @@
       coord: [1196,3385]
       vars:
         women: .add(1)
+  - Scan amiibo for .npc(Epona):
+      icon: horse
+      coord: [1235,3370]
   - .dir(E) to .loc(Lakeside Stable):
       comment: look for .w(Totsuna, Meeshy, & Letty)
       movements:
-        - [1235,3370]
         - [1292,3387]
         - [1370,3390]
         - [1531,3487]
@@ -675,9 +669,6 @@
         - [1571,3513]
       vars:
         women: .add(2)
-  - Take horse:
-      icon: horse
-      coord: [1552,3530]
   - .dir(E) to .loc(Tuft Mountain):
       movements:
         - [1621,3477]
@@ -745,10 +736,13 @@
       icon: item
       comment: under house
       coord: [2884,3404]
-  - Eat speed food
+  - Climb up wall:
+      coord: [2910,3325]
+  - Scan amiibo for .npc(Epona):
+      icon: horse
+      coord: [2901,3289]
   - .dir(N) to .loc(Hateno Village):
       movements:
-        - [2910,3325]
         - [2854,3143]
         - [3031,2727]
         - [3049,2625]
@@ -757,6 +751,7 @@
       counter: .var(women)
       comment: at fork in road
       coord: [3086,2446]
+  - Eat speed food
   - Talk to .npc(Bolson):
       icon: male
       movements:
@@ -1030,10 +1025,6 @@
       movements:
         - [3481,-567]
         - [3385,-674]
-        - [3342,-685]
-  - Ice Arrows:
-      icon: chest
-      coord: [3375,-702]
   - .dir(NE) to .loc(Toto Lake):
       movements:
         - [3376,-712]
@@ -1071,10 +1062,9 @@
   - Talk to .npc(Hudson) again:
       icon-doc: male
       comment: give him 10 wood
-  - .dir(WNW) to .loc(Torin Wetland):
-      movements:
-        - [3798,-1660]
-        - [3705,-1711]
+  - Scan amiibo for .npc(Epona):
+      icon: horse
+      coord: [3786,-1682]
       notes: be a bit to the right to avoid the guardians
   - Rare Ore Deposit:
       icon: rar
@@ -1206,14 +1196,14 @@
       counter: .var(women)
       comment: near horses
       coord: [1078,-1132]
+  - .item(Wood) (2):
+      icon: item
+      coord: [1034,-1148]
   - Reload for .w(Karsh):
       icon: misc
       counter: .var(women)
       comment: gerudo traveller
       coord: [1060,-1107]
-  - .item(Wood) (2):
-      icon: item
-      coord: [1034,-1148]
   - Warp to .loc(Dah Hesho):
       icon-doc: incsh
       movements:
@@ -1235,14 +1225,14 @@
       coord: [3982,-1736]
       vars:
         r: .add(300)
+  - Scan amiibo for .npc(Epona):
+      icon: horse
+      coord: [4038,-1818]
   - .dir(N) to .loc(East Akkala Stable):
       movements:
-        - [4050,-1866]
+        - [4155,-1906]
         - [4214,-2486]
         - [4266,-2580]
-  - Take horse:
-      icon: horse
-      coord: [4233,-2744]
   - .w(Nobo):
       icon: hyli-w
       counter: .var(women)
@@ -1829,7 +1819,7 @@
       movements:
         - to: [3899,-1303]
           warp: true
-      color: deeppink
+      color: orange
   - .dir(N) to .loc(Tarrey Town)
   - Talk to .npc(Hudson):
       icon: male
@@ -1852,7 +1842,7 @@
       movements:
         - to: [-3656,-1758]
           warp: true
-      color: salmon
+      color: yellow
   - .w(Amali):
       icon: rito-b
       coord: [-3668,-1770]
